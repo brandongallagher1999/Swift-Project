@@ -39,7 +39,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZE0-ry-PaK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zPM-i0-Soq"/>
+                    <navigationItem key="navigationItem" id="zPM-i0-Soq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dUj-0c-NpT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VK6-L8-bS9">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create"/>
+                            </button>
+                            <connections>
+                                <action selector="btnCreate:" destination="XQc-Av-k0v" id="ZuI-kd-vnH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblNotes" destination="8NR-PL-aT9" id="AbF-OQ-UEO"/>
                     </connections>

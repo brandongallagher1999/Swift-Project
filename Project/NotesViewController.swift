@@ -29,7 +29,10 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-
+    @IBAction func btnCreate(_ sender: Any) {
+        
+    }
+    
     
     
     override func viewDidLoad() {
