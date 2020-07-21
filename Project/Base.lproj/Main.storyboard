@@ -7,22 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Note List View Controller-->
-        <scene sceneID="5DM-UE-xKV">
+        <!--Notes View Controller-->
+        <scene sceneID="DkO-TO-XNk">
             <objects>
-                <viewController id="mw1-CY-vPx" customClass="NoteListViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gxh-bW-C3H">
+                <viewController id="XQc-Av-k0v" customClass="NotesViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMs-1b-txZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecp-s7-ugC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8NR-PL-aT9">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="sKg-bg-BhM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="et1-oI-4fW">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sKg-bg-BhM" id="jMM-9a-SSZ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="et1-oI-4fW" id="F7P-Sr-Cle">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -32,21 +32,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="R1S-VY-OPz" firstAttribute="trailing" secondItem="ecp-s7-ugC" secondAttribute="trailing" id="0ZA-a8-I4u"/>
-                            <constraint firstItem="ecp-s7-ugC" firstAttribute="leading" secondItem="R1S-VY-OPz" secondAttribute="leading" id="9fn-IK-cyK"/>
-                            <constraint firstItem="R1S-VY-OPz" firstAttribute="bottom" secondItem="ecp-s7-ugC" secondAttribute="bottom" id="ccf-We-ZSd"/>
-                            <constraint firstItem="ecp-s7-ugC" firstAttribute="top" secondItem="R1S-VY-OPz" secondAttribute="top" id="pat-A8-pqa"/>
+                            <constraint firstItem="ZE0-ry-PaK" firstAttribute="bottom" secondItem="8NR-PL-aT9" secondAttribute="bottom" id="GGy-T2-udb"/>
+                            <constraint firstItem="ZE0-ry-PaK" firstAttribute="trailing" secondItem="8NR-PL-aT9" secondAttribute="trailing" id="Pmb-9l-bXA"/>
+                            <constraint firstItem="8NR-PL-aT9" firstAttribute="top" secondItem="ZE0-ry-PaK" secondAttribute="top" id="WfI-gq-C5i"/>
+                            <constraint firstItem="8NR-PL-aT9" firstAttribute="leading" secondItem="ZE0-ry-PaK" secondAttribute="leading" id="fSV-VM-K8T"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="R1S-VY-OPz"/>
+                        <viewLayoutGuide key="safeArea" id="ZE0-ry-PaK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wpc-mr-92k"/>
+                    <navigationItem key="navigationItem" id="zPM-i0-Soq"/>
                     <connections>
-                        <outlet property="tblNoteList" destination="ecp-s7-ugC" id="ZSb-0Y-Eyd"/>
+                        <outlet property="tblNotes" destination="8NR-PL-aT9" id="AbF-OQ-UEO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nrt-tL-33H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1I-5m-4oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="-633"/>
+            <point key="canvasLocation" x="1030" y="-515"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -135,7 +135,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Note List"/>
                                         <connections>
-                                            <segue destination="mw1-CY-vPx" kind="show" id="ELs-Mm-f4f"/>
+                                            <segue destination="XQc-Av-k0v" kind="show" id="jFD-tV-02e"/>
                                         </connections>
                                     </button>
                                 </subviews>
