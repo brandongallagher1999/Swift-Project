@@ -11,7 +11,7 @@ import UIKit
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tblNotes: UITableView!
-    let array = ["why","won't","this","work","anymore"]
+    var array = ["why","won't","this","work","anymore"]
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -21,6 +21,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return array.count
     }
     
+    //generate cells for table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Hello")
         
@@ -29,6 +30,23 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    //swipe to delete function
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    
+            if editingStyle == .delete {
+    
+                // remove the item from the data model
+                array.remove(at: indexPath.row)
+    
+                // delete the table view row
+                tableView.deleteRows(at: [indexPath], with: .fade)
+    
+            } else if editingStyle == .insert {
+                // Not used in our example, but if you were adding a new row, this is where you would do it.
+            }
+        }
+    
+    //create new note
     @IBAction func btnCreate(_ sender: Any) {
         
     }

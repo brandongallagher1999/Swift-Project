@@ -40,11 +40,11 @@
                         <viewLayoutGuide key="safeArea" id="ZE0-ry-PaK"/>
                     </view>
                     <navigationItem key="navigationItem" id="zPM-i0-Soq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dUj-0c-NpT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="dUj-0c-NpT">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VK6-L8-bS9">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <rect key="frame" x="364" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create"/>
+                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
                             </button>
                             <connections>
                                 <action selector="btnCreate:" destination="XQc-Av-k0v" id="ZuI-kd-vnH"/>
@@ -183,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="future.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="43p-Rk-xUo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="43p-Rk-xUo">
                                 <rect key="frame" x="0.0" y="44" width="414" height="218"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej4-fd-vMX">
@@ -309,6 +309,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="future.jpg" width="609.75" height="315"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
