@@ -20,6 +20,7 @@
 		560D1FA824BE1D5100419424 /* ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1FA724BE1D5100419424 /* ProjectUITests.swift */; };
 		560D1FBA24BE20CF00419424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1FB924BE20CF00419424 /* LoginViewController.swift */; };
 		56755FBB24CA0AA400FDC628 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56755FBA24CA0AA400FDC628 /* GoogleService-Info.plist */; };
+		56755FBD24CA12EF00FDC628 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56755FBC24CA12EF00FDC628 /* RegisterViewController.swift */; };
 		A0A141879DE6F19584370AFF /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851C817258DAA6C122B0C89A /* Pods_Project.framework */; };
 		F7A030C810672542EA7AB280 /* Pods_Project_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D580A6A6A86F961D14D8 /* Pods_Project_ProjectUITests.framework */; };
 		FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EA2FD24C7471900AC4928 /* NotesViewController.swift */; };
@@ -65,6 +66,7 @@
 		560D1FA924BE1D5100419424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560D1FB924BE20CF00419424 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56755FBA24CA0AA400FDC628 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56755FBC24CA12EF00FDC628 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		69BDFDE8A0B6790A2D1A4B19 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		742BF2F2EB797A21E6243A48 /* Pods-ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTests/Pods-ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		851C817258DAA6C122B0C89A /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				560D1FB924BE20CF00419424 /* LoginViewController.swift */,
+				56755FBC24CA12EF00FDC628 /* RegisterViewController.swift */,
 			);
 			path = brandon;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				560D1FBA24BE20CF00419424 /* LoginViewController.swift in Sources */,
 				560D1F8A24BE1D5000419424 /* ViewController.swift in Sources */,
 				4923497624BFC6820089C91F /* HomepageViewController.swift in Sources */,
+				56755FBD24CA12EF00FDC628 /* RegisterViewController.swift in Sources */,
 				FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */,
 				560D1F8624BE1D5000419424 /* AppDelegate.swift in Sources */,
 				FDF7B44124BF724300C97A0D /* NoteViewController.swift in Sources */,
