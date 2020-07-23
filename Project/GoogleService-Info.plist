@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>69178217402-7riboteo45qvijkg8bq9pq5bck9m9f6v.apps.googleusercontent.com</string>
+	<string>69178217402-rcnh1fe8t7d32ongtbvnnspqt5fveqtj.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.69178217402-7riboteo45qvijkg8bq9pq5bck9m9f6v</string>
+	<string>com.googleusercontent.apps.69178217402-rcnh1fe8t7d32ongtbvnnspqt5fveqtj</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBa77qslCvM3nO7GoMNa4ASOeUkoOklHtc</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.swiftproject.thebois</string>
+	<string>com.bigbois.Project</string>
 	<key>PROJECT_ID</key>
 	<string>swift-project-95786</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:69178217402:ios:e7a31f1206741fd3dd0383</string>
+	<string>1:69178217402:ios:78a0be00a9912d73dd0383</string>
 	<key>DATABASE_URL</key>
 	<string>https://swift-project-95786.firebaseio.com</string>
 </dict>

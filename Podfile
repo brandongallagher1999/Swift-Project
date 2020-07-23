@@ -6,6 +6,7 @@ target 'Project' do
   use_frameworks!
 
   # Pods for Project
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
 

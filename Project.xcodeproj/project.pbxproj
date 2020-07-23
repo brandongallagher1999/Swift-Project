@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		560D1F9D24BE1D5100419424 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1F9C24BE1D5100419424 /* ProjectTests.swift */; };
 		560D1FA824BE1D5100419424 /* ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1FA724BE1D5100419424 /* ProjectUITests.swift */; };
 		560D1FBA24BE20CF00419424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1FB924BE20CF00419424 /* LoginViewController.swift */; };
+		56755FBB24CA0AA400FDC628 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56755FBA24CA0AA400FDC628 /* GoogleService-Info.plist */; };
 		A0A141879DE6F19584370AFF /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851C817258DAA6C122B0C89A /* Pods_Project.framework */; };
 		F7A030C810672542EA7AB280 /* Pods_Project_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D580A6A6A86F961D14D8 /* Pods_Project_ProjectUITests.framework */; };
 		FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EA2FD24C7471900AC4928 /* NotesViewController.swift */; };
@@ -63,6 +64,7 @@
 		560D1FA724BE1D5100419424 /* ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUITests.swift; sourceTree = "<group>"; };
 		560D1FA924BE1D5100419424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560D1FB924BE20CF00419424 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56755FBA24CA0AA400FDC628 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69BDFDE8A0B6790A2D1A4B19 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		742BF2F2EB797A21E6243A48 /* Pods-ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTests/Pods-ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		851C817258DAA6C122B0C89A /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +113,6 @@
 				742BF2F2EB797A21E6243A48 /* Pods-ProjectTests.debug.xcconfig */,
 				0AF1650FF44E71B05CD40676 /* Pods-ProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +142,7 @@
 		560D1F8424BE1D5000419424 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				56755FBA24CA0AA400FDC628 /* GoogleService-Info.plist */,
 				560D1FB824BE1FAB00419424 /* mike */,
 				560D1FB724BE1FA200419424 /* elias */,
 				560D1FB624BE1F6100419424 /* brandon */,
@@ -319,6 +321,7 @@
 			files = (
 				49A9824B24C78E1800BEE6B2 /* future.jpg in Resources */,
 				560D1F9224BE1D5100419424 /* LaunchScreen.storyboard in Resources */,
+				56755FBB24CA0AA400FDC628 /* GoogleService-Info.plist in Resources */,
 				560D1F8F24BE1D5100419424 /* Assets.xcassets in Resources */,
 				560D1F8D24BE1D5000419424 /* Main.storyboard in Resources */,
 			);
