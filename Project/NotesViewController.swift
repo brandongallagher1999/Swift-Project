@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tblNotes: UITableView!
     var array = ["why","won't","this","work","anymore"]
+    
+    let db = Firestore.firestore()
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -46,10 +50,41 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     
-    //create new note
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(array[indexPath.row])
+    }
+    
     @IBAction func btnCreate(_ sender: Any) {
+        let createAlert = UIAlertController(title: "Add note", message: "Insert title and content", preferredStyle: .alert)
+               
+               createAlert.addTextField()
+               createAlert.addTextField()
+               
+               let titleField = createAlert.textFields![0]
+               let contentField = createAlert.textFields![1]
+               
+               let addButton = UIAlertAction(title: "Confirm", style: .default) { (action) in
+                   
+               
+                   var ref : DocumentReference? = nil
+                   ref = self.db.collection("notes").addDocument(data: [
+                       "title" : titleField.text!,
+                       "content" : contentField.text!
+                   ]) {error in
+                       if let error = error {
+                           print("Error!")
+                       } else{
+                           print("Document Added Successfully!")
+                       }
+                   }
+               }
+               
+        createAlert.addAction(addButton)
+        present(createAlert, animated: true, completion: nil)
         
     }
+    
+    
     
     
     
