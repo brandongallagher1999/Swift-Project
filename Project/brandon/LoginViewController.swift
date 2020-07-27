@@ -15,7 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "goToNotes", sender: self)
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -23,13 +25,14 @@ class LoginViewController: UIViewController {
     @IBAction func push(_ sender: Any) {
         let email = String(emailField.text!)
         let password = String(passwordField.text!)
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) {
+            [weak self] authResult, error in
           guard let strongSelf = self else { return }
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainController")
-            self.presentedViewController(vc, animated: true)
-            
+            if Auth.auth().currentUser != nil {
+                self?.performSegue(withIdentifier: "goToNotes", sender: self)
+            }
+                        
         }
     }
     

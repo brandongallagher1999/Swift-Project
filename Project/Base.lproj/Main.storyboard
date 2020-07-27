@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fEl-rW-lGl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NeY-By-wOU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -194,11 +194,11 @@
             <objects>
                 <viewController id="69s-WI-xSx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NH6-zb-hfp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="future.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="43p-Rk-xUo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="218"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej4-fd-vMX">
                                 <rect key="frame" x="12" y="154" width="166" height="51"/>
@@ -215,7 +215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-X7-Ec7">
-                                <rect key="frame" x="80" y="272" width="254" height="305"/>
+                                <rect key="frame" x="80" y="218" width="254" height="305"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Watch TV  " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lY7-VG-4Ei">
                                         <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
@@ -298,6 +298,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lUs-MG-2aS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4OB-Cq-C7h"/>
+                    <connections>
+                        <segue destination="NeY-By-wOU" kind="presentation" identifier="goToLoginFromMain" id="aA9-Y4-NGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R2-7C-1QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,6 +387,7 @@
                     <connections>
                         <outlet property="emailField" destination="Bcl-oR-wrg" id="ncn-Xc-U22"/>
                         <outlet property="passwordField" destination="13G-hW-P6a" id="U6c-1S-GC9"/>
+                        <segue destination="69s-WI-xSx" kind="presentation" identifier="goToNotes" id="QdX-oy-oJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gad-oC-9T5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -455,6 +460,7 @@
                         <outlet property="goBack" destination="y24-sF-iIy" id="Tzx-bo-lRe"/>
                         <outlet property="passwordField" destination="UCD-DB-1dI" id="SKj-z3-IJQ"/>
                         <outlet property="signUpButton" destination="vZd-hp-cUT" id="Oap-Hq-a9c"/>
+                        <segue destination="NeY-By-wOU" kind="presentation" identifier="goToLogin" id="PEy-PE-qW6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7I-ct-GzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,9 +470,10 @@
     </scenes>
     <resources>
         <image name="future.jpg" width="609.75" height="315"/>
-        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aA9-Y4-NGx"/>
         <segue reference="1xh-xD-2WR"/>
     </inferredMetricsTieBreakers>
 </document>

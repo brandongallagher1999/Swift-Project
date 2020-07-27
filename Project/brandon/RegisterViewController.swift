@@ -20,7 +20,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPassField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "goToNotes", sender: self)
+        }
         // Do any additional setup after loading the view.
     }
     
