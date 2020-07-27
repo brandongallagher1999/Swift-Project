@@ -13,8 +13,10 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     
+    @IBOutlet weak var goBack: UIButton!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var confirmPassField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,10 @@ class RegisterViewController: UIViewController {
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pwd){
                 authResult, error in
                 
+                self.emailField.isHidden = true
+                self.passwordField.isHidden = true
+                self.confirmPassField.isHidden = true
+                self.signUpButton.isHidden = true
                 
                 
             }

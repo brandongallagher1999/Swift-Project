@@ -64,6 +64,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZE0-ry-PaK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FJd-2r-r3A"/>
                     <connections>
                         <outlet property="tblNotes" destination="8NR-PL-aT9" id="AbF-OQ-UEO"/>
                     </connections>
@@ -75,7 +76,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +326,7 @@
             <objects>
                 <viewController id="NeY-By-wOU" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q9A-Ae-oio">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bcl-oR-wrg">
@@ -378,8 +379,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BI9-yt-R9K"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TNj-r7-Ikr"/>
                     <connections>
                         <outlet property="emailField" destination="Bcl-oR-wrg" id="ncn-Xc-U22"/>
+                        <outlet property="passwordField" destination="13G-hW-P6a" id="U6c-1S-GC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gad-oC-9T5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -439,6 +442,7 @@
                                 <state key="normal" title="Go Back"/>
                                 <connections>
                                     <action selector="push:" destination="NeY-By-wOU" eventType="touchDown" id="2CQ-Bw-wCy"/>
+                                    <segue destination="NeY-By-wOU" kind="show" id="nkg-NV-T4S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -448,7 +452,9 @@
                     <connections>
                         <outlet property="confirmPassField" destination="1Aw-dq-Ufg" id="Cag-5W-BeB"/>
                         <outlet property="emailField" destination="DvF-70-qIw" id="qcw-W7-wu4"/>
+                        <outlet property="goBack" destination="y24-sF-iIy" id="Tzx-bo-lRe"/>
                         <outlet property="passwordField" destination="UCD-DB-1dI" id="SKj-z3-IJQ"/>
+                        <outlet property="signUpButton" destination="vZd-hp-cUT" id="Oap-Hq-a9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7I-ct-GzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
