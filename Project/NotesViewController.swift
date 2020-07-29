@@ -15,6 +15,8 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tblNotes: UITableView!
     var array = ["why","won't","this","work","anymore"]
     
+    var segueTransfer = Int()
+    
     let db = Firestore.firestore()
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,6 +54,17 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(array[indexPath.row])
+        segueTransfer = indexPath.row
+        self.performSegue(withIdentifier: "segue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segue" {
+            
+            let destinationController = segue.destination as! NoteDetailViewController
+            destinationController.noteId = segueTransfer
+        }
     }
     
     @IBAction func btnCreate(_ sender: Any) {
@@ -65,7 +78,11 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                
                let addButton = UIAlertAction(title: "Confirm", style: .default) { (action) in
                    
-               
+                if titleField.text == ""
+                {
+                    //do nothing
+                }
+                else{
                    var ref : DocumentReference? = nil
                    ref = self.db.collection("notes").addDocument(data: [
                        "title" : titleField.text!,
@@ -77,6 +94,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                            print("Document Added Successfully!")
                        }
                    }
+                }
                }
                
         createAlert.addAction(addButton)

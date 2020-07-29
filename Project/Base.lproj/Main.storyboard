@@ -67,11 +67,28 @@
                     <navigationItem key="navigationItem" id="FJd-2r-r3A"/>
                     <connections>
                         <outlet property="tblNotes" destination="8NR-PL-aT9" id="AbF-OQ-UEO"/>
+                        <segue destination="MRR-zS-Nl6" kind="show" identifier="segue" id="QZP-tF-7sS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1I-5m-4oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="-515.625"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="JlM-ga-9q7">
+            <objects>
+                <viewController id="MRR-zS-Nl6" customClass="NoteDetailViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QSe-zg-7K8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wfi-aL-cvr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V14-dl-Rnq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqO-Yu-5Iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-515"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

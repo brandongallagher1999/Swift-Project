@@ -24,6 +24,8 @@
 		56755FBD24CA12EF00FDC628 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56755FBC24CA12EF00FDC628 /* RegisterViewController.swift */; };
 		A0A141879DE6F19584370AFF /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851C817258DAA6C122B0C89A /* Pods_Project.framework */; };
 		F7A030C810672542EA7AB280 /* Pods_Project_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D580A6A6A86F961D14D8 /* Pods_Project_ProjectUITests.framework */; };
+		FD2594CB24D1F7CA002A51D4 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2594CA24D1F7CA002A51D4 /* NoteDetailViewController.swift */; };
+		FD2594CD24D1F8C6002A51D4 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2594CC24D1F8C6002A51D4 /* constants.swift */; };
 		FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EA2FD24C7471900AC4928 /* NotesViewController.swift */; };
 		FDF7B44124BF724300C97A0D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF7B44024BF724300C97A0D /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		9471E36B82DA9916BECEA989 /* Pods-Project-ProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-ProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-Project-ProjectUITests/Pods-Project-ProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A99D2276FDF4954632DEF15F /* Pods-Project-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-ProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-Project-ProjectUITests/Pods-Project-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C76DCE6689AE594B6DC0C8D9 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
+		FD2594CA24D1F7CA002A51D4 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		FD2594CC24D1F8C6002A51D4 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		FD5EA2FD24C7471900AC4928 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		FDF7B44024BF724300C97A0D /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,10 +158,12 @@
 				560D1F8724BE1D5000419424 /* SceneDelegate.swift */,
 				560D1F8924BE1D5000419424 /* ViewController.swift */,
 				FD5EA2FD24C7471900AC4928 /* NotesViewController.swift */,
+				FD2594CA24D1F7CA002A51D4 /* NoteDetailViewController.swift */,
 				560D1F8B24BE1D5000419424 /* Main.storyboard */,
 				560D1F8E24BE1D5100419424 /* Assets.xcassets */,
 				560D1F9024BE1D5100419424 /* LaunchScreen.storyboard */,
 				560D1F9324BE1D5100419424 /* Info.plist */,
+				FD2594CC24D1F8C6002A51D4 /* constants.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -460,6 +466,8 @@
 			files = (
 				560D1FBA24BE20CF00419424 /* LoginViewController.swift in Sources */,
 				560D1F8A24BE1D5000419424 /* ViewController.swift in Sources */,
+				FD2594CB24D1F7CA002A51D4 /* NoteDetailViewController.swift in Sources */,
+				FD2594CD24D1F8C6002A51D4 /* constants.swift in Sources */,
 				4923497624BFC6820089C91F /* HomepageViewController.swift in Sources */,
 				56755FBD24CA12EF00FDC628 /* RegisterViewController.swift in Sources */,
 				FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */,
