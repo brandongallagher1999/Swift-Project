@@ -193,8 +193,8 @@
 		560D1FB624BE1F6100419424 /* brandon */ = {
 			isa = PBXGroup;
 			children = (
-				560D1FB924BE20CF00419424 /* LoginViewController.swift */,
 				56755FBC24CA12EF00FDC628 /* RegisterViewController.swift */,
+				560D1FB924BE20CF00419424 /* LoginViewController.swift */,
 			);
 			path = brandon;
 			sourceTree = "<group>";

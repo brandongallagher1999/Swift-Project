@@ -12,16 +12,16 @@
             <objects>
                 <viewController id="XQc-Av-k0v" customClass="NotesViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eMs-1b-txZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4t-90-WRz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Title" id="gtc-Cu-iOc">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="hWO-27-wuY">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bVE-4D-W5G">
-                                                <rect key="frame" x="376" y="11" width="18" height="22"/>
+                                                <rect key="frame" x="376" y="17" width="18" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="plus" catalog="system"/>
                                                 <connections>
@@ -79,7 +79,7 @@
             <objects>
                 <viewController id="MRR-zS-Nl6" customClass="NoteDetailViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QSe-zg-7K8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wfi-aL-cvr"/>
@@ -95,14 +95,14 @@
             <objects>
                 <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-Dh-wzb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-MV-pcd">
-                                        <rect key="frame" x="0.0" y="58" width="414" height="408"/>
+                                        <rect key="frame" x="0.0" y="58" width="414" height="442"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAT-Am-UVx">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25.5"/>
@@ -134,7 +134,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKp-MB-BmG">
-                                                <rect key="frame" x="0.0" y="168.5" width="414" height="153"/>
+                                                <rect key="frame" x="0.0" y="168.5" width="414" height="187"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -142,13 +142,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-Nw-ywL">
-                                                <rect key="frame" x="0.0" y="339.5" width="414" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="373.5" width="414" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email or username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-eV-slb">
-                                                <rect key="frame" x="0.0" y="378" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="412" width="414" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="la8-zG-u4F"/>
                                                 </constraints>
@@ -482,15 +482,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVk-G4-Etf">
+                                <rect key="frame" x="20" y="672" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="XQc-Av-k0v" kind="show" id="M7G-KY-BKO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nbf-X7-Ec7" firstAttribute="leading" secondItem="lUs-MG-2aS" secondAttribute="leading" constant="80" id="6xQ-O8-VtJ"/>
                             <constraint firstItem="nbf-X7-Ec7" firstAttribute="top" secondItem="43p-Rk-xUo" secondAttribute="bottom" constant="10" id="A1s-cy-g11"/>
+                            <constraint firstItem="lUs-MG-2aS" firstAttribute="trailing" secondItem="pVk-G4-Etf" secondAttribute="trailing" constant="348" id="Ibo-mP-i20"/>
                             <constraint firstItem="lUs-MG-2aS" firstAttribute="bottom" secondItem="43p-Rk-xUo" secondAttribute="bottom" constant="600" id="R0s-cS-oYY"/>
                             <constraint firstItem="lUs-MG-2aS" firstAttribute="trailing" secondItem="43p-Rk-xUo" secondAttribute="trailing" id="XkR-tR-It2"/>
                             <constraint firstItem="43p-Rk-xUo" firstAttribute="top" secondItem="lUs-MG-2aS" secondAttribute="top" id="dqB-w5-2gC"/>
+                            <constraint firstItem="pVk-G4-Etf" firstAttribute="leading" secondItem="lUs-MG-2aS" secondAttribute="leading" constant="20" id="gYW-mX-grw"/>
                             <constraint firstItem="43p-Rk-xUo" firstAttribute="leading" secondItem="lUs-MG-2aS" secondAttribute="leading" id="oFT-re-rOw"/>
+                            <constraint firstItem="lUs-MG-2aS" firstAttribute="bottom" secondItem="pVk-G4-Etf" secondAttribute="bottom" constant="106" id="q60-zT-4BP"/>
                             <constraint firstItem="lUs-MG-2aS" firstAttribute="trailing" secondItem="nbf-X7-Ec7" secondAttribute="trailing" constant="80" id="wAM-Nv-1xl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lUs-MG-2aS"/>
@@ -502,7 +512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R2-7C-1QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="843"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="842.41071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aX3-0j-SAe">
@@ -567,6 +577,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fEl-rW-lGl" kind="show" id="Zvl-tE-IfF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzH-Qz-5ph">
                                 <rect key="frame" x="29" y="678" width="74" height="30"/>
@@ -596,7 +609,7 @@
             <objects>
                 <viewController id="fEl-rW-lGl" customClass="RegisterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cds-Cd-4hu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DvF-70-qIw">
@@ -651,6 +664,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1Lw-hc-FDe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0b3-WG-tjo"/>
                     <connections>
                         <outlet property="confirmPassField" destination="1Aw-dq-Ufg" id="Cag-5W-BeB"/>
                         <outlet property="emailField" destination="DvF-70-qIw" id="qcw-W7-wu4"/>
@@ -671,6 +685,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aA9-Y4-NGx"/>
-        <segue reference="d3X-fo-zFU"/>
+        <segue reference="1xh-xD-2WR"/>
+        <segue reference="M7G-KY-BKO"/>
     </inferredMetricsTieBreakers>
 </document>

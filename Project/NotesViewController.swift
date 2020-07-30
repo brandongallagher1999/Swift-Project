@@ -19,20 +19,22 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let db = Firestore.firestore()
     
+    var notes = [String]()
+    var documentIDs = [String]()
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return notes.count
     }
     
     //generate cells for table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Hello")
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row]
+        print(notes)
+        cell.textLabel?.text = notes[indexPath.row]
         return cell
     }
     
@@ -41,14 +43,21 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
             if editingStyle == .delete {
     
-                // remove the item from the data model
-                array.remove(at: indexPath.row)
-    
-                // delete the table view row
-                tableView.deleteRows(at: [indexPath], with: .fade)
-    
-            } else if editingStyle == .insert {
-                // Not used in our example, but if you were adding a new row, this is where you would do it.
+                db.collection("notes").document(documentIDs[indexPath.row]).delete() { err in
+                    if err != nil {
+                        print("Error deleting")
+                    }else{
+                        print("Delete Successful!")
+                        // remove the item from the data model
+                        self.notes.remove(at: indexPath.row)
+                        self.documentIDs.remove(at: indexPath.row)
+                        
+                        // delete the table view row
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                    }
+                }
+                
+                
             }
         }
     
@@ -86,12 +95,17 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                    var ref : DocumentReference? = nil
                    ref = self.db.collection("notes").addDocument(data: [
                        "title" : titleField.text!,
-                       "content" : contentField.text!
+                       "content" : contentField.text!,
+                       "Uid" : "123456"
                    ]) {error in
                        if let error = error {
                            print("Error!")
-                       } else{
-                           print("Document Added Successfully!")
+                       } else
+                       {
+                            print("Document Added Successfully!")
+                            self.notes.removeAll()
+                            self.documentIDs.removeAll()
+                            self.getNotesFromDB()
                        }
                    }
                 }
@@ -102,16 +116,38 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    
+    func getNotesFromDB(){
+        _ = db.collection("notes").getDocuments() { (querySnapshot, err) in
+            if err != nil{
+                print("Error getting documents")
+            } else {
+                for document in querySnapshot!.documents {
+                    if let title = document.data()["title"] as? String {
+                        print(title)
+                        self.notes.append(title)
+                        print(self.notes)
+                    }
+                    if document == document {
+                        print(document.documentID)
+                        self.documentIDs.append(document.documentID)
+                    }
+                    
+                    
+                }
+                self.tblNotes.delegate = self
+                self.tblNotes.dataSource = self
+                self.tblNotes.reloadData()
+            }
+        }
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("init")
-        tblNotes.delegate = self
-        tblNotes.delegate = self
-        tblNotes.dataSource = self
+        self.tblNotes.allowsSelectionDuringEditing = false
+        getNotesFromDB()
         // Do any additional setup after loading the view.
     }
     

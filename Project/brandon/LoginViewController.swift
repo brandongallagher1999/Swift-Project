@@ -23,16 +23,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func push(_ sender: Any) {
+        print("login")
         let email = String(emailField.text!)
         let password = String(passwordField.text!)
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) {
             [weak self] authResult, error in
-          guard let strongSelf = self else { return }
+            guard let strongSelf = self else { return }
             
             if Auth.auth().currentUser != nil {
+               
                 self?.performSegue(withIdentifier: "goToNotes", sender: self)
             }
-                        
+           
         }
     }
     
