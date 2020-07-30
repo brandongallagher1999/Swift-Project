@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		312D0349D5E15BF133EA2F97 /* Pods_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFE464E2F2DBAA580A615B6 /* Pods_ProjectTests.framework */; };
 		4923497624BFC6820089C91F /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923497524BFC6820089C91F /* HomepageViewController.swift */; };
+		49A96AA224D2DAF800A37526 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96AA124D2DAF800A37526 /* HomeViewController.swift */; };
+		49A96AA424D2E51B00A37526 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96AA324D2E51B00A37526 /* LocationViewController.swift */; };
 		49A9824B24C78E1800BEE6B2 /* future.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A9824A24C78E1800BEE6B2 /* future.jpg */; };
 		49D9F24024CA142200D3420F /* future.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49D9F23F24CA142200D3420F /* future.jpg */; };
 		560D1F8624BE1D5000419424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1F8524BE1D5000419424 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		1147D580A6A6A86F961D14D8 /* Pods_Project_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFE464E2F2DBAA580A615B6 /* Pods_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4923497524BFC6820089C91F /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = SOURCE_ROOT; };
+		49A96AA124D2DAF800A37526 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49A96AA324D2E51B00A37526 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		49A9824A24C78E1800BEE6B2 /* future.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = future.jpg; path = ../../Downloads/future.jpg; sourceTree = "<group>"; };
 		49D9F23F24CA142200D3420F /* future.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = future.jpg; sourceTree = "<group>"; };
 		560D1F8224BE1D5000419424 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +204,8 @@
 			children = (
 				4923497524BFC6820089C91F /* HomepageViewController.swift */,
 				49D9F23F24CA142200D3420F /* future.jpg */,
+				49A96AA124D2DAF800A37526 /* HomeViewController.swift */,
+				49A96AA324D2E51B00A37526 /* LocationViewController.swift */,
 			);
 			path = elias;
 			sourceTree = "<group>";
@@ -467,10 +473,12 @@
 				560D1FBA24BE20CF00419424 /* LoginViewController.swift in Sources */,
 				560D1F8A24BE1D5000419424 /* ViewController.swift in Sources */,
 				FD2594CB24D1F7CA002A51D4 /* NoteDetailViewController.swift in Sources */,
+				49A96AA424D2E51B00A37526 /* LocationViewController.swift in Sources */,
 				FD2594CD24D1F8C6002A51D4 /* constants.swift in Sources */,
 				4923497624BFC6820089C91F /* HomepageViewController.swift in Sources */,
 				56755FBD24CA12EF00FDC628 /* RegisterViewController.swift in Sources */,
 				FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */,
+				49A96AA224D2DAF800A37526 /* HomeViewController.swift in Sources */,
 				560D1F8624BE1D5000419424 /* AppDelegate.swift in Sources */,
 				FDF7B44124BF724300C97A0D /* NoteViewController.swift in Sources */,
 				560D1F8824BE1D5000419424 /* SceneDelegate.swift in Sources */,
