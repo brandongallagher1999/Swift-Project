@@ -11,6 +11,8 @@
 		4923497624BFC6820089C91F /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923497524BFC6820089C91F /* HomepageViewController.swift */; };
 		49A96AA224D2DAF800A37526 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96AA124D2DAF800A37526 /* HomeViewController.swift */; };
 		49A96AA424D2E51B00A37526 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96AA324D2E51B00A37526 /* LocationViewController.swift */; };
+		49A96AA824D3A45700A37526 /* settingsImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A96AA724D3A45700A37526 /* settingsImage2.jpg */; };
+		49A96AAA24D3A58B00A37526 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A96AA924D3A58B00A37526 /* SettingsViewController.swift */; };
 		49A9824B24C78E1800BEE6B2 /* future.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A9824A24C78E1800BEE6B2 /* future.jpg */; };
 		49D9F24024CA142200D3420F /* future.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49D9F23F24CA142200D3420F /* future.jpg */; };
 		560D1F8624BE1D5000419424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D1F8524BE1D5000419424 /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		4923497524BFC6820089C91F /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = SOURCE_ROOT; };
 		49A96AA124D2DAF800A37526 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49A96AA324D2E51B00A37526 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		49A96AA724D3A45700A37526 /* settingsImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settingsImage2.jpg; path = ../../../settingsImage2.jpg; sourceTree = "<group>"; };
+		49A96AA924D3A58B00A37526 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		49A9824A24C78E1800BEE6B2 /* future.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = future.jpg; path = ../../Downloads/future.jpg; sourceTree = "<group>"; };
 		49D9F23F24CA142200D3420F /* future.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = future.jpg; sourceTree = "<group>"; };
 		560D1F8224BE1D5000419424 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,8 +208,10 @@
 			children = (
 				4923497524BFC6820089C91F /* HomepageViewController.swift */,
 				49D9F23F24CA142200D3420F /* future.jpg */,
+				49A96AA724D3A45700A37526 /* settingsImage2.jpg */,
 				49A96AA124D2DAF800A37526 /* HomeViewController.swift */,
 				49A96AA324D2E51B00A37526 /* LocationViewController.swift */,
+				49A96AA924D3A58B00A37526 /* SettingsViewController.swift */,
 			);
 			path = elias;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				49A9824B24C78E1800BEE6B2 /* future.jpg in Resources */,
 				560D1F9224BE1D5100419424 /* LaunchScreen.storyboard in Resources */,
 				56755FBB24CA0AA400FDC628 /* GoogleService-Info.plist in Resources */,
+				49A96AA824D3A45700A37526 /* settingsImage2.jpg in Resources */,
 				560D1F8F24BE1D5100419424 /* Assets.xcassets in Resources */,
 				560D1F8D24BE1D5000419424 /* Main.storyboard in Resources */,
 			);
@@ -480,6 +487,7 @@
 				FD5EA2FE24C7471900AC4928 /* NotesViewController.swift in Sources */,
 				49A96AA224D2DAF800A37526 /* HomeViewController.swift in Sources */,
 				560D1F8624BE1D5000419424 /* AppDelegate.swift in Sources */,
+				49A96AAA24D3A58B00A37526 /* SettingsViewController.swift in Sources */,
 				FDF7B44124BF724300C97A0D /* NoteViewController.swift in Sources */,
 				560D1F8824BE1D5000419424 /* SceneDelegate.swift in Sources */,
 			);
