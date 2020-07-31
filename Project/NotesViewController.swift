@@ -13,9 +13,8 @@ import FirebaseFirestore
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tblNotes: UITableView!
-    var array = ["why","won't","this","work","anymore"]
     
-    var segueTransfer = Int()
+    var segueTransfer = String()
     
     let db = Firestore.firestore()
     
@@ -62,8 +61,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(array[indexPath.row])
-        segueTransfer = indexPath.row
+        segueTransfer = documentIDs[indexPath.row]
         self.performSegue(withIdentifier: "segue", sender: self)
     }
     

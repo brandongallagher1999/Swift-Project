@@ -81,14 +81,39 @@
                     <view key="view" contentMode="scaleToFill" id="QSe-zg-7K8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCQ-iR-nf5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Title" id="cja-BE-Sfi"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zQ-SQ-oiE">
+                                <rect key="frame" x="0.0" y="56" width="414" height="409"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wCQ-iR-nf5" firstAttribute="leading" secondItem="wfi-aL-cvr" secondAttribute="leading" id="JYY-Db-7ED"/>
+                            <constraint firstItem="wCQ-iR-nf5" firstAttribute="top" secondItem="wfi-aL-cvr" secondAttribute="top" id="X7H-7N-DSI"/>
+                            <constraint firstItem="wCQ-iR-nf5" firstAttribute="trailing" secondItem="wfi-aL-cvr" secondAttribute="trailing" id="ghI-eJ-Aq3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wfi-aL-cvr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V14-dl-Rnq"/>
+                    <connections>
+                        <outlet property="NavBar" destination="wCQ-iR-nf5" id="PeJ-wO-umb"/>
+                        <outlet property="tvContent" destination="7zQ-SQ-oiE" id="AhH-Gr-PCE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqO-Yu-5Iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="-515"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="-515.625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -368,7 +393,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsImage2" translatesAutoresizingMaskIntoConstraints="NO" id="QtO-px-1Nn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsR-1Q-4Je">
                                 <rect key="frame" x="45" y="138" width="107" height="36"/>
@@ -745,7 +770,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="future.jpg" width="609.75" height="315"/>
+        <image name="future.jpg" width="512" height="512"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="settingsImage2" width="686" height="280"/>
     </resources>
