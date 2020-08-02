@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -17,6 +18,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var segueTransfer = String()
     
     let db = Firestore.firestore()
+    let user = Auth.auth().currentUser
     
     var notes = [String]()
     var documentIDs = [String]()
@@ -94,7 +96,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                    ref = self.db.collection("notes").addDocument(data: [
                        "title" : titleField.text!,
                        "content" : contentField.text!,
-                       "Uid" : "123456"
+                       "Uid" : [self.user?.uid]
                    ]) {error in
                        if let error = error {
                            print("Error!")

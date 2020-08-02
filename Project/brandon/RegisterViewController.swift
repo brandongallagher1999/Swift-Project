@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
+    
+    var db = Firestore.firestore()
 
     @IBOutlet weak var emailField: UITextField!
     
@@ -42,7 +45,7 @@ class RegisterViewController: UIViewController {
                 self.confirmPassField.isHidden = true
                 self.signUpButton.isHidden = true
                 
-                
+                self.storeUserInfo()
             }
         }
     }
@@ -59,6 +62,21 @@ class RegisterViewController: UIViewController {
         else
         {
             return false
+        }
+    }
+    
+    func storeUserInfo(){
+        var ref : DocumentReference? = nil
+        ref = self.db.collection("users").addDocument(data: [
+            "email" : Auth.auth().currentUser?.email,
+            "uid" : Auth.auth().currentUser?.uid
+        ]) {error in
+            if let error = error {
+                print("Error!")
+            } else
+            {
+                print("Document Added Successfully!")
+            }
         }
     }
     

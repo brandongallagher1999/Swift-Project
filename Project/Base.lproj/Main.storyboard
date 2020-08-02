@@ -85,7 +85,20 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCQ-iR-nf5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Title" id="cja-BE-Sfi"/>
+                                    <navigationItem title="Title" id="cja-BE-Sfi">
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="pencil" catalog="system" id="W1A-M0-m4o">
+                                                <connections>
+                                                    <action selector="editNote:" destination="MRR-zS-Nl6" id="Knb-mX-Ilw"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="9Nt-06-c5n">
+                                                <connections>
+                                                    <action selector="ShareNote:" destination="MRR-zS-Nl6" id="Jgy-uw-oje"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zQ-SQ-oiE">
@@ -109,6 +122,8 @@
                     <navigationItem key="navigationItem" id="R8A-mi-7fv"/>
                     <connections>
                         <outlet property="NavBar" destination="wCQ-iR-nf5" id="PeJ-wO-umb"/>
+                        <outlet property="btnShare" destination="9Nt-06-c5n" id="SdJ-nh-F2S"/>
+                        <outlet property="btnUpdate" destination="W1A-M0-m4o" id="JVa-WT-Tdh"/>
                         <outlet property="tvContent" destination="7zQ-SQ-oiE" id="AhH-Gr-PCE"/>
                     </connections>
                 </viewController>
@@ -770,8 +785,10 @@
     </scenes>
     <resources>
         <image name="future copy.jpg" width="609.75" height="315"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="settingsImage2 copy.jpg" width="514.5" height="210"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nkg-NV-T4S"/>

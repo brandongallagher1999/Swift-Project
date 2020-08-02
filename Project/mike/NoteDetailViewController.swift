@@ -14,12 +14,57 @@ import FirebaseFirestore
 class NoteDetailViewController: UIViewController {
     
    
+    @IBOutlet weak var btnShare: UIBarButtonItem!
+    @IBOutlet weak var btnUpdate: UIBarButtonItem!
     @IBOutlet weak var tvContent: UITextView!
     var noteId = String()
     var noteTitle = String()
     var noteContent = String()
     let db = Firestore.firestore()
     @IBOutlet weak var NavBar: UINavigationBar!
+    
+    
+    
+    @IBAction func ShareNote(_ sender: Any) {
+        print("share")
+        var uid = String()
+        let shareAlert = UIAlertController(title: "Share note", message: "Enter the email of the user you'd like to share the note with.", preferredStyle: UIAlertController.Style.alert)
+        shareAlert.addTextField()
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        let shareAction = UIAlertAction(title: "Share", style: .default)  { (action) in
+            let textField = shareAlert.textFields![0]
+            self.db.collection("users").whereField("email", isEqualTo: textField.text).getDocuments() { (querySnapshot, err) in
+                if let err = err{
+                    print("error")
+                } else{
+                    for document in querySnapshot!.documents {
+                        self.addUidToNote(uid : document.data()["uid"] as! String)
+                    }
+                }
+            }
+        }
+        
+        shareAlert.addAction(cancelAction)
+        shareAlert.addAction(shareAction)
+        print("about to share")
+        present(shareAlert, animated: true, completion: nil)
+    }
+    @IBAction func editNote(_ sender: Any) {
+        print("edit")
+    }
+    
+    func addUidToNote(uid : String){
+        var uids = [String]()
+        print("UID IS \(uid)")
+        db.collection("notes").document(noteId).getDocument() { (querySnapshot, err) in
+            if let err = err{
+                print("error")
+            }else{
+                let probUid = querySnapshot?.data()?.index(forKey: "uid")
+                print(probUid)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
