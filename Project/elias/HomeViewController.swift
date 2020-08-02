@@ -15,6 +15,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var SettigsButton: UIButton!
     @IBOutlet weak var LocationButton: UIButton!
     
+    @IBAction func LoginSegue(_ sender: Any) {
+        performSegue(withIdentifier: "loginSegue", sender: LoginButton)
+    }
+    
     
     @IBAction func blueButton(_ sender: Any) {
         LoginButton.backgroundColor = .blue

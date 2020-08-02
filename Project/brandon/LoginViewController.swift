@@ -29,13 +29,13 @@ class LoginViewController: UIViewController {
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) {
             [weak self] authResult, error in
             guard let strongSelf = self else { return }
-            
+        }
             if Auth.auth().currentUser != nil {
                
-                self?.performSegue(withIdentifier: "goToNotes", sender: self)
+                self.performSegue(withIdentifier: "goToNotes", sender: self)
             }
            
-        }
+        
     }
     
     /*
