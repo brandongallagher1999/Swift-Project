@@ -17,24 +17,31 @@ class NoteDetailViewController: UIViewController {
     @IBOutlet weak var btnShare: UIBarButtonItem!
     @IBOutlet weak var btnUpdate: UIBarButtonItem!
     @IBOutlet weak var tvContent: UITextView!
+    
+    
     var noteId = String()
     var noteTitle = String()
     var noteContent = String()
     let db = Firestore.firestore()
+    
     @IBOutlet weak var NavBar: UINavigationBar!
     
     
     
     @IBAction func ShareNote(_ sender: Any) {
-        print("share")
-        var uid = String()
+        //make alert for sharing based off email
         let shareAlert = UIAlertController(title: "Share note", message: "Enter the email of the user you'd like to share the note with.", preferredStyle: UIAlertController.Style.alert)
         shareAlert.addTextField()
+        
+        //cancel and share buttons
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         let shareAction = UIAlertAction(title: "Share", style: .default)  { (action) in
+            
             let textField = shareAlert.textFields![0]
-            self.db.collection("users").whereField("email", isEqualTo: textField.text).getDocuments() { (querySnapshot, err) in
-                if let err = err{
+            
+            //query to find the user's uid then add it to the note based of the document ID
+            self.db.collection("users").whereField("email", isEqualTo: textField.text!).getDocuments() { (querySnapshot, err) in
+                if err != nil{
                     print("error")
                 } else{
                     for document in querySnapshot!.documents {
@@ -46,7 +53,7 @@ class NoteDetailViewController: UIViewController {
         
         shareAlert.addAction(cancelAction)
         shareAlert.addAction(shareAction)
-        print("about to share")
+        
         present(shareAlert, animated: true, completion: nil)
     }
     @IBAction func editNote(_ sender: Any) {
@@ -56,14 +63,17 @@ class NoteDetailViewController: UIViewController {
         editAlert.addTextField()
         let titleText = editAlert.textFields![0]
         let contentText = editAlert.textFields![1]
-        print(noteTitle)
-        print(noteContent)
+        
+        //insert the old text into the textfields of the alert
         titleText.insertText(self.NavBar.topItem!.title!)
         contentText.insertText(self.tvContent.text)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            //update the note based of the docID with the new content
             self.db.collection("notes").document(self.noteId).updateData(["title" : titleText.text!, "content" : contentText.text!])
+            
+            //set the title and content to the updated text
             self.tvContent.text = contentText.text
             self.NavBar.topItem!.title = titleText.text
         }
@@ -76,15 +86,16 @@ class NoteDetailViewController: UIViewController {
     
     func addUidToNote(uid : String){
         var uids = [String]()
-        print("UID IS \(uid)")
+        
+        //retrieve the array of uids and then add the new uid to the list.
         db.collection("notes").document(noteId).getDocument(source: .cache) { (document, error) in
             if let document = document {
                 let oldUids = document.get("Uid") as! [String]
                 for old in oldUids{
                     uids.append(old)
                 }
-                print(uids)
                 uids.append(uid)
+                //update with the new array
                 self.db.collection("notes").document(self.noteId).updateData(["Uid" : uids])
             }
             
@@ -93,16 +104,14 @@ class NoteDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(noteId)
         
         let docRef = db.collection("notes").document(noteId)
         
+        //get the document based off the id of the selected note and populate the views
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let noteTitle = document.data()!["title"] as? String
                 let noteContent = document.data()!["content"] as? String
-                print(noteTitle as Any)
-                print(noteContent as Any)
                 self.title = noteTitle
                 self.NavBar.topItem!.title = noteTitle
                 self.tvContent.text = noteContent
