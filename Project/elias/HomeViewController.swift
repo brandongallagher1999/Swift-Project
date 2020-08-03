@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -16,7 +17,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var LocationButton: UIButton!
     
     @IBAction func LoginSegue(_ sender: Any) {
-        performSegue(withIdentifier: "loginSegue", sender: LoginButton)
+        if Auth.auth().currentUser != nil{
+            transitionToNotes()
+        }else{
+            performSegue(withIdentifier: "loginSegue", sender: LoginButton)
+        }
     }
     
     
@@ -54,9 +59,14 @@ class HomeViewController: UIViewController {
         LocationButton.backgroundColor = .orange
     }
     
+    func transitionToNotes(){
+        let transition = storyboard?.instantiateViewController(identifier: constants.storyboardIDs.ListController) as? NotesViewController
+        view.window?.rootViewController = transition
+        view.window?.makeKeyAndVisible()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -20,7 +21,19 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
               myTableView.dataSource = self
               
           }
-        
+    
+    
+    @IBAction func btnSignout(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+            let transition = storyboard?.instantiateViewController(identifier: constants.storyboardIDs.HomeController) as? HomeViewController
+            view.window?.rootViewController = transition
+            view.window?.makeKeyAndVisible()
+        }catch let error as NSError{
+            print(error.localizedDescription)
+        }
+    }
+    
             func numberOfSections(in tableView: UITableView) -> Int {
                 return 1
             }

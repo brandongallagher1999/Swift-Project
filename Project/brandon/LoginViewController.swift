@@ -16,7 +16,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "goToNotes", sender: self)
+            print(Auth.auth().currentUser == nil)
+            transitionToNotes()
         }
         
         // Do any additional setup after loading the view.
@@ -31,11 +32,19 @@ class LoginViewController: UIViewController {
             guard let strongSelf = self else { return }
         }
             if Auth.auth().currentUser != nil {
-               
-                self.performSegue(withIdentifier: "goToNotes", sender: self)
+                
+                transitionToNotes()
+                
+                //self.performSegue(withIdentifier: "goToNotes", sender: self)
             }
            
         
+    }
+    
+    func transitionToNotes(){
+        let transition = storyboard?.instantiateViewController(identifier: constants.storyboardIDs.ListController) as? NotesViewController
+        view.window?.rootViewController = transition
+        view.window?.makeKeyAndVisible()
     }
     
     /*

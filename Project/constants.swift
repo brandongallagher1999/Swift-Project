@@ -11,5 +11,6 @@ struct constants{
     struct storyboardIDs{
         static let ListController = "NoteList"
         static let DetailsController = "NoteDetails"
+        static let HomeController = "Homepage"
     }
 }
