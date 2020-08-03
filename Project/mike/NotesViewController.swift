@@ -17,6 +17,8 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var segueTransfer = String()
     
+    var refreshControl = UIRefreshControl()
+    
     let db = Firestore.firestore()
     let user = Auth.auth().currentUser
     
@@ -142,14 +144,21 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    
-    
+    @objc func refresh(_ sender: AnyObject) {
+        print("Refreshing...")
+        self.notes.removeAll()
+        self.documentIDs.removeAll()
+        self.getNotesFromDB()
+        refreshControl.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("init")
         self.tblNotes.allowsSelectionDuringEditing = false
         getNotesFromDB()
-        // Do any additional setup after loading the view.
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tblNotes.addSubview(refreshControl)        // Do any additional setup after loading the view.
     }
     
 
