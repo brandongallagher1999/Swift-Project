@@ -92,11 +92,12 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     //do nothing
                 }
                 else{
-                   var ref : DocumentReference? = nil
-                   ref = self.db.collection("notes").addDocument(data: [
+                    var ref : DocumentReference? = nil
+                    var uidArray : [String] = [self.user!.uid]
+                    ref = self.db.collection("notes").addDocument(data: [
                        "title" : titleField.text!,
                        "content" : contentField.text!,
-                       "Uid" : [self.user?.uid]
+                       "Uid" : uidArray
                    ]) {error in
                        if let error = error {
                            print("Error!")
@@ -117,7 +118,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func getNotesFromDB(){
-        _ = db.collection("notes").getDocuments() { (querySnapshot, err) in
+        _ = db.collection("notes").whereField("Uid", arrayContains: user?.uid as Any).getDocuments() { (querySnapshot, err) in
             if err != nil{
                 print("Error getting documents")
             } else {

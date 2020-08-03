@@ -56,13 +56,17 @@ class NoteDetailViewController: UIViewController {
     func addUidToNote(uid : String){
         var uids = [String]()
         print("UID IS \(uid)")
-        db.collection("notes").document(noteId).getDocument() { (querySnapshot, err) in
-            if let err = err{
-                print("error")
-            }else{
-                let probUid = querySnapshot?.data()?.index(forKey: "uid")
-                print(probUid)
+        db.collection("notes").document(noteId).getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let oldUids = document.get("Uid") as! [String]
+                for old in oldUids{
+                    uids.append(old)
+                }
+                print(uids)
+                uids.append(uid)
+                self.db.collection("notes").document(self.noteId).updateData(["Uid" : uids])
             }
+            
         }
     }
     
