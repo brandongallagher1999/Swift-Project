@@ -68,7 +68,7 @@ class RegisterViewController: UIViewController {
     func storeUserInfo(){
         var ref : DocumentReference? = nil
         ref = self.db.collection("users").addDocument(data: [
-            "email" : Auth.auth().currentUser?.email,
+            "email" : Auth.auth().currentUser?.email!,
             "uid" : Auth.auth().currentUser?.uid
         ]) {error in
             if let error = error {
