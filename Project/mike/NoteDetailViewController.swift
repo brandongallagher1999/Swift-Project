@@ -50,7 +50,28 @@ class NoteDetailViewController: UIViewController {
         present(shareAlert, animated: true, completion: nil)
     }
     @IBAction func editNote(_ sender: Any) {
-        print("edit")
+        let editAlert = UIAlertController(title: "Edit Note", message: "Edit your title and content.", preferredStyle: .alert)
+        
+        editAlert.addTextField()
+        editAlert.addTextField()
+        let titleText = editAlert.textFields![0]
+        let contentText = editAlert.textFields![1]
+        print(noteTitle)
+        print(noteContent)
+        titleText.insertText(self.NavBar.topItem!.title!)
+        contentText.insertText(self.tvContent.text)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            self.db.collection("notes").document(self.noteId).updateData(["title" : titleText.text!, "content" : contentText.text!])
+            self.tvContent.text = contentText.text
+            self.NavBar.topItem!.title = titleText.text
+        }
+        
+        editAlert.addAction(cancelAction)
+        editAlert.addAction(confirmAction)
+        
+        present(editAlert, animated: true, completion: nil)
     }
     
     func addUidToNote(uid : String){
@@ -85,7 +106,6 @@ class NoteDetailViewController: UIViewController {
                 self.title = noteTitle
                 self.NavBar.topItem!.title = noteTitle
                 self.tvContent.text = noteContent
-//https://stackoverflow.com/questions/27652227/how-can-i-add-placeholder-text-inside-of-a-uitextview-in-swift
             }
         }
         // Do any additional setup after loading the view.
