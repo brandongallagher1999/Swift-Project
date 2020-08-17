@@ -10,7 +10,7 @@ https://github.com/brandongallagher1999/Swift-Project
 - **Elias M. Aguilera Yambay**
   - Roles: Back-end / User-Interface Design
   - Email: rolic100@gmail.com
-  - [GitHub Profile] (https://github.com/eliasaguilera7)
+  - [GitHub Profile](https://github.com/eliasaguilera7)
 - **Brandon Gallagher**
   - Roles: Back-end / Login-Page
   - Email: brandonegallagher@gmail.com
